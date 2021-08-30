@@ -1,15 +1,17 @@
-// write some modular javascript
-import list1 from './list';
-const body = document.querySelector('body');
-const f1 = () => {
-  list1.forEach(({ name, age }) => {
-    const h1 = document.createElement('h1');
-    const p = document.createElement('p');
-    h1.innerText = name;
-    p.innerText = age;
-    body.append(h1);
-    body.append(p);
+const googleDatabase = [
+  'cats.com',
+  'soup.com',
+  'flowers.com',
+  'animals.com',
+  'unsplash.com',
+  'spicysoup.com',
+];
+
+const googleSearch = (searchInput) => {
+  const matches = googleDatabase.filter((website) => {
+    return website.includes(searchInput);
   });
+  return matches.length > 3 ? matches.slice(0, 3) : matches;
 };
 
-f1();
+console.log(googleSearch('cats'));
