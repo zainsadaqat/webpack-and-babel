@@ -18,7 +18,7 @@
     "style-loader": "^3.2.1"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch *.js",
     "build": "webpack --mode production"
   },
   "repository": {
