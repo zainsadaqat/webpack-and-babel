@@ -20,7 +20,7 @@
     "style-loader": "^3.2.1"
   },
   "scripts": {
-    "test": "jest --watch *.js",
+    "test": "jest --watch *.js --detectOpenHandles",
     "build": "webpack --mode production"
   },
   "repository": {
